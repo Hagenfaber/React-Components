@@ -1,0 +1,31 @@
+@tailwind components;
+
+@layer components {
+    .btn {
+        @apply flex gap-3 px-4 py-2 rounded-md drop-shadow-sm transition-colors;
+    }
+    
+    .btn-lg {
+        @apply btn px-6 py-4;
+    }
+
+    .btn-google-colors {
+        @apply dark:bg-gray-700 dark:hover:bg-gray-600 bg-gray-700 hover:bg-gray-600;
+    }
+
+    .btn-primary-colors {
+        @apply dark:bg-green-700 dark:hover:bg-green-600 bg-green-700 hover:bg-green-600;
+    }
+
+    .btn-google {
+        @apply btn btn-google-colors;
+    }
+
+    .btn-primary {
+        @apply btn btn-primary-colors;
+    }
+
+    .btn-primary-lg {
+        @apply btn-lg btn-primary-colors;  
+    }
+}
