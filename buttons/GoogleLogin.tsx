@@ -1,9 +1,7 @@
-/** @format */
-
 import React from "react";
 import PropTypes from "prop-types";
 
-import {signInWithGooglePopup} from "@utils/firebase.utils";
+import {signInWithGooglePopup} from "../../utils/firebase.utils";
 import {BeakerIcon} from "@heroicons/react/24/solid";
 
 interface IGoogleLoginButtonProps {}
