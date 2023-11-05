@@ -5,12 +5,6 @@ import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { PlusIcon } from '@heroicons/react/20/solid'
 import Link from "next/link";
 
-const user = {
-    name: 'Tom Cook',
-    email: 'tom@example.com',
-    imageUrl:
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-}
 const navigation = [
     // { name: 'Dashboard', href: '/dashboard', current: false },
     { name: 'Clients', href: '/dashboard/clients', current: false },
@@ -18,9 +12,7 @@ const navigation = [
     { name: 'Track', href: '/dashboard/track', current: false },
 ]
 const userNavigation = [
-    { name: 'Your Profile', href: '#' },
-    { name: 'Settings', href: '#' },
-    { name: 'Sign out', href: '#' },
+    { name: 'Sign out', href: '/api/auth/signout' },
 ]
 
 function classNames(...classes: string[]) {
@@ -92,13 +84,13 @@ export default function Example() {
 
                                     {/* Profile dropdown */}
                                     <Menu as="div" className="relative ml-3">
-                                        <div>
-                                            <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
-                                                <span className="absolute -inset-1.5" />
-                                                <span className="sr-only">Open user menu</span>
-                                                <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />
-                                            </Menu.Button>
-                                        </div>
+                                        {/*<div>*/}
+                                        {/*    <Menu.Button className="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">*/}
+                                        {/*        <span className="absolute -inset-1.5" />*/}
+                                        {/*        <span className="sr-only">Open user menu</span>*/}
+                                        {/*        <img className="h-8 w-8 rounded-full" src={user.imageUrl} alt="" />*/}
+                                        {/*    </Menu.Button>*/}
+                                        {/*</div>*/}
                                         <Transition
                                             as={Fragment}
                                             enter="transition ease-out duration-200"
@@ -151,13 +143,13 @@ export default function Example() {
                         </div>
                         <div className="border-t border-gray-700 pb-3 pt-4">
                             <div className="flex items-center px-5 sm:px-6">
-                                <div className="flex-shrink-0">
-                                    <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />
-                                </div>
-                                <div className="ml-3">
-                                    <div className="text-base font-medium text-white">{user.name}</div>
-                                    <div className="text-sm font-medium text-gray-400">{user.email}</div>
-                                </div>
+                                {/*<div className="flex-shrink-0">*/}
+                                {/*    <img className="h-10 w-10 rounded-full" src={user.imageUrl} alt="" />*/}
+                                {/*</div>*/}
+                                {/*<div className="ml-3">*/}
+                                {/*    <div className="text-base font-medium text-white">{user.name}</div>*/}
+                                {/*    <div className="text-sm font-medium text-gray-400">{user.email}</div>*/}
+                                {/*</div>*/}
                                 <button
                                     type="button"
                                     className="relative ml-auto flex-shrink-0 rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
