@@ -1,6 +1,5 @@
 "use client";
 import { SigninButton } from "@/components/client/SigninButton";
-import { Provider } from "@/providers/SessionProvider";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { PlusIcon } from "@heroicons/react/20/solid";
 import { Bars3Icon, BellIcon, XMarkIcon } from "@heroicons/react/24/outline";
@@ -86,10 +85,7 @@ export default function Example() {
 
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
-                    <Provider>
-                      <SigninButton />
-                    </Provider>
-
+                    <SigninButton />
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-200"
