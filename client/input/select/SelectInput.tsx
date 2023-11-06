@@ -2,6 +2,11 @@
 
 import { DetailedHTMLProps, SelectHTMLAttributes, forwardRef } from "react";
 
+interface SelectItem {
+  id: string;
+  name: string;
+}
+
 export interface SelectInputProps
   extends DetailedHTMLProps<
     SelectHTMLAttributes<HTMLSelectElement>,
@@ -9,7 +14,7 @@ export interface SelectInputProps
   > {
   id: string;
   label: string;
-  items: any[];
+  items: SelectItem[];
   otherProps?: any;
 }
 
