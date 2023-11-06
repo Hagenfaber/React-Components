@@ -20,6 +20,7 @@ const Template: Story = {
 
 export const Empty = {
   ...Template,
+  tags: ["autodocs"],
   args: {
     id: "",
     label: "",
