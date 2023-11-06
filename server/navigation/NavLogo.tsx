@@ -1,10 +1,15 @@
+import Image from "next/image";
+
 export const NavLogo = () => {
   return (
     <div className="flex flex-shrink-0 items-center">
-      <img
+      <Image
         className="h-8 w-auto"
-        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=500"
-        alt="Your Company"
+        src="https://hagenfaber.eu/assets/hagenfaber.png"
+        width={500}
+        height={500}
+        priority
+        alt="Hagenfaber"
       />
     </div>
   );

@@ -34,7 +34,7 @@ export const SelectInput = forwardRef(function SelectInput(
         {...otherProps}
         name={id}
         ref={ref}
-        className="bg-gray-50 dark:bg-slate-600 border border-gray-300 dark:border-slate-500 text-gray-900 dark:text-gray-200 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 "
+        className="block w-full rounded-md border-0 bg-white/5 py-1.5 text-white shadow-sm ring-1 ring-inset ring-white/10 focus:ring-2 focus:ring-inset focus:ring-indigo-500 sm:text-sm sm:leading-6"
       >
         <option value={"default"} disabled>
           &#60;{label}&#62;

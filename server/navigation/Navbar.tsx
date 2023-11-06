@@ -1,5 +1,4 @@
 "use client";
-import { SigninButton } from "@/components/client/SigninButton";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 import { PlusIcon } from "@heroicons/react/20/solid";
 import { BellIcon } from "@heroicons/react/24/outline";
@@ -7,6 +6,7 @@ import { Fragment } from "react";
 import { MobileNavToggle } from "./MobileNavToggle";
 import { NavItem } from "./NavItem";
 import { NavLogo } from "./NavLogo";
+import { ProfileButton } from "./ProfileButton";
 
 const navigation = [
   // { name: 'Dashboard', href: '/dashboard', current: false },
@@ -16,7 +16,7 @@ const navigation = [
 ];
 const userNavigation = [{ name: "Sign out", href: "/api/auth/signout" }];
 
-export default function Example() {
+export default function Navbar() {
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -57,7 +57,9 @@ export default function Example() {
 
                   {/* Profile dropdown */}
                   <Menu as="div" className="relative ml-3">
-                    <SigninButton />
+                    <div>
+                      <Menu.Button as={ProfileButton} />
+                    </div>
                     <Transition
                       as={Fragment}
                       enter="transition ease-out duration-200"
