@@ -11,8 +11,6 @@ import { ProfileButton } from "./ProfileButton";
 const navigation = [
   // { name: 'Dashboard', href: '/dashboard', current: false },
   { name: "Clients", href: "/dashboard/clients", current: false },
-  { name: "Projects", href: "/dashboard/projects", current: false },
-  { name: "Track", href: "/dashboard/track", current: false },
 ];
 const userNavigation = [{ name: "Sign out", href: "/api/auth/signout" }];
 
