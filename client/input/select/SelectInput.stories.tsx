@@ -20,10 +20,22 @@ const Template: Story = {
 
 export const Empty = {
   ...Template,
-  args: {},
+  args: {
+    id: "",
+    label: "",
+    items: [],
+  },
 };
 
 export const Default = {
   ...Template,
-  args: {},
+  args: {
+    id: "testingSelect",
+    label: "Select",
+    items: [
+      { value: "1", name: "Item 1" },
+      { value: "2", name: "Item 2" },
+      { value: "3", name: "Item 3" },
+    ],
+  },
 };

@@ -26,7 +26,7 @@ export const SelectInput = forwardRef(function SelectInput(
     <div className="">
       <label
         htmlFor={id}
-        className="block mb-2 text-sm font-medium text-gray-900"
+        className="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-200"
       >
         {label}
       </label>
