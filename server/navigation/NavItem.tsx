@@ -1,5 +1,6 @@
 import { classNames } from "@/utils/classNames";
 import Link from "next/link";
+import { forwardRef } from "react";
 
 interface Props {
   name: string;
@@ -9,13 +10,10 @@ interface Props {
   otherProps?: any;
 }
 
-export const NavItem = ({
-  name,
-  href,
-  current = false,
-  block = false,
-  ...otherProps
-}: Props) => {
+export const NavItem = forwardRef(function NavItem(
+  { name, href, current = false, block = false, ...otherProps }: Props,
+  ref: any
+) {
   return (
     <Link
       key={name}
@@ -32,4 +30,4 @@ export const NavItem = ({
       {name}
     </Link>
   );
-};
+});

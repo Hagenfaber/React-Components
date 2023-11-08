@@ -2,12 +2,16 @@
 
 import { useSession } from "next-auth/react";
 import Image from "next/image";
+import { forwardRef } from "react";
 
 interface Props {
   otherProps?: any;
 }
 
-export const ProfileButton = ({ ...otherProps }: Props) => {
+export const ProfileButton = forwardRef(function ProfileButton(
+  { ...otherProps }: Props,
+  ref: any
+) {
   const { data: session } = useSession();
 
   if (!session || !session.user) {
@@ -29,4 +33,4 @@ export const ProfileButton = ({ ...otherProps }: Props) => {
       />
     </button>
   );
-};
+});

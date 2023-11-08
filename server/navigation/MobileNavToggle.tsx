@@ -1,11 +1,15 @@
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { forwardRef } from "react";
 
 interface Props {
   open: boolean;
   otherProps?: any;
 }
 
-export const MobileNavToggle = ({ open, ...otherProps }: Props) => {
+export const MobileNavToggle = forwardRef(function MobileNavToggle(
+  { open, ...otherProps }: Props,
+  ref: any
+) {
   return (
     <button
       className="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
@@ -20,4 +24,4 @@ export const MobileNavToggle = ({ open, ...otherProps }: Props) => {
       )}
     </button>
   );
-};
+});
