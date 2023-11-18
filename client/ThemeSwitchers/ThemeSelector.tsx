@@ -11,7 +11,7 @@ export const ThemeSelector = () => {
     setMounted(true);
     const currentTheme = theme === "system" ? systemTheme : theme;
     setTheme(currentTheme ?? "light");
-  }, []);
+  }, [setTheme, systemTheme, theme]);
 
   if (!mounted) {
     return null;

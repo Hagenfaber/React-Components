@@ -3,10 +3,11 @@
 import { StoryObj } from "@storybook/react";
 import { SelectInput } from "./SelectInput";
 
-export default {
+const story = {
   title: "Client/Input/Select",
   component: SelectInput,
 };
+export default story;
 
 type Story = StoryObj<typeof SelectInput>;
 
