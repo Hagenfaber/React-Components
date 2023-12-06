@@ -2,7 +2,6 @@
   "name": "@Hagenfaber/react-components",
   "homepage": "http://Hagenfaber.github.io/React-Components",
   "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
