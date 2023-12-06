@@ -1,5 +1,5 @@
 {
-  "name": "react-components",
+  "name": "@HagenFaber/react-components",
   "homepage": "http://Hagenfaber.github.io/React-Components",
   "version": "0.1.0",
   "private": true,
@@ -10,9 +10,10 @@
     "lint": "next lint",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "predeploy": "bun run build-storybook",
+    "predeploy": "npm run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
+  "main": "src/index.ts",
   "publishConfig": {
     "registry": "https://npm.pkg.github.com/@HagenFaber"
   },
