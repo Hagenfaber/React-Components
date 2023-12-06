@@ -1,5 +1,5 @@
 {
-  "name": "@HagenFaber/react-components",
+  "name": "@Hagenfaber/react-components",
   "homepage": "http://Hagenfaber.github.io/React-Components",
   "version": "0.1.0",
   "private": true,
@@ -15,7 +15,11 @@
   },
   "main": "src/index.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@HagenFaber"
+    "registry": "https://npm.pkg.github.com/@Hagenfaber"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hagenfaber/React-Components"
   },
   "dependencies": {
     "@mui/base": "^5.0.0-beta.26",
