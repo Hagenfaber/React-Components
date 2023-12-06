@@ -11,7 +11,6 @@ interface ButtonProps extends WithChildren, WithClassName, WithClick<HTMLButtonE
 }
 
 export const Button = ({onClick, className, variant = "unstyled", children}: ButtonProps) => {
-
   return (
     <MuiButton
       type="button"

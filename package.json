@@ -13,6 +13,9 @@
     "predeploy": "bun run build-storybook",
     "deploy-storybook": "gh-pages -d storybook-static"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/@HagenFaber"
+  },
   "dependencies": {
     "@mui/base": "^5.0.0-beta.26",
     "next": "14.0.3",
