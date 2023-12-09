@@ -1,24 +1,25 @@
 import React from 'react';
 import { twMerge } from 'tailwind-merge'
-import { Button as MuiButton } from '@mui/base/Button';
 import {WithChildren} from "@/interfaces/WithChildren";
-import {WithClassName} from "@/interfaces/WithClassname";
-import {WithClick} from "@/interfaces/WithClick";
 import styles from "./Button.module.scss"
+import {useButton, AriaButtonOptions} from 'react-aria';
 
-interface ButtonProps extends WithChildren, WithClassName, WithClick<HTMLButtonElement> {
+interface ButtonProps extends AriaButtonOptions<'button'>, WithChildren {
   variant?: Variant;
 }
 
-export const Button = ({onClick, className, variant = "unstyled", children}: ButtonProps) => {
+export const Button = (props: ButtonProps) => {
+  let ref = React.useRef(null);
+  let { buttonProps } = useButton(props, ref);
+
+  buttonProps.className = twMerge(styles[props.variant ?? "unstyled"], buttonProps.className)
+
   return (
-    <MuiButton
-      type="button"
-      className={twMerge(className, styles[variant])}
-      onClick={onClick}
+    <button
+      {...buttonProps} ref={ref}
     >
-      {children}
-    </MuiButton>
+      {props.children}
+    </button>
   );
 };
 

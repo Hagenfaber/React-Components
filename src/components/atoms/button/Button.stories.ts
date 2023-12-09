@@ -11,9 +11,6 @@ const meta = {
     layout: 'centered',
   },
   // More on argTypes: https://storybook.js.org/docs/api/argtypes
-  argTypes: {
-    onClick: { control: 'none'},
-  },
   args: {
     children: "test"
   }
