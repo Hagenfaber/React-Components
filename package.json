@@ -1,7 +1,7 @@
 {
   "name": "@hagenfaber/react-components",
   "homepage": "http://Hagenfaber.github.io/React-Components",
-  "version": "0.0.1",
+  "version": "0.0.1.1",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
